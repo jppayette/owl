@@ -39,8 +39,6 @@
             }
         }
         .break-anywhere { overflow-wrap: break-word; word-break: break-word; }
-        .modal-enter { animation: fadeIn 0.2s ease-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
     </style>
 </head>
 <body class="bg-[#0B0E14] bg-cover bg-center min-h-screen flex items-center justify-center p-4 md:p-8 relative overflow-x-hidden"
@@ -48,16 +46,7 @@
 
     <div class="fixed inset-0 bg-black/45 backdrop-blur-[1.5px] z-0"></div>
 
-    <!-- Cookies (conservé) -->
-    <div class="fixed bottom-5 left-5 z-[999]">
-        <a href="/cookies" class="flex items-center justify-center w-11 h-11 bg-black/70 backdrop-blur-md border border-cyan-400/50 rounded-full text-cyan-400 hover:border-cyan-400 hover:shadow-[0_0_12px_#00FFFF] transition">
-            <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-3.45 2.19-6.39 5.28-7.53-.12.34-.19.7-.19 1.08 0 1.66 1.34 3 3 3 .38 0 .74-.07 1.08-.19C12.61 9.81 15.55 12 15.55 15c0 1.93-1.57 3.5-3.5 3.5-1.93 0-3.5-1.57-3.5-3.5 0-.38.07-.74.19-1.08C7.81 13.39 6 16.55 6 20h12c0-4.41-3.59-8-8-8z"/>
-            </svg>
-        </a>
-    </div>
-
-    <!-- Chouette (inchangée) -->
+    <!-- Chouette -->
     <div class="owl-block">
         <img src="images/owl.png" alt="OWL Systems" class="owl-image">
     </div>
@@ -80,32 +69,15 @@
                 Nous mettons à niveau nos infrastructures pour vous offrir un service encore plus performant et sécurisé.
             </p>
 
-            <!-- Bloc raison professionnelle -->
+            <!-- Bloc raison professionnelle - VOTRE TEXTE EXACT -->
             <div class="bg-cyan-500/5 border-l-4 border-cyan-400 p-4 rounded-r-xl mb-5 shadow-[0_2px_10px_rgba(0,255,255,0.1)]">
-                <p class="font-museo text-cyan-300/70 text-xs uppercase tracking-wide">Pourquoi cette interruption ?</p>
+                <p class="font-museo text-cyan-300/70 text-xs uppercase tracking-wide">Maintenance programmée</p>
                 <p class="text-white/90 text-sm md:text-base leading-relaxed">
-                    <span class="font-semibold">Migration vers une infrastructure haute disponibilité</span><br>
-                    Dans le cadre de notre politique d’amélioration continue, nous procédons à la <span class="text-cyan-300">mise à jour de nos systèmes de sécurité et de supervision</span>. Cette opération planifiée renforce la résilience de nos plateformes et accélère les temps de réponse.
-                </p>
-                <p class="text-cyan-200/70 text-xs mt-2 flex items-center gap-1">
-                    <span class="inline-block w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
-                    Temps estimé : <span class="font-bold text-white">2 à 4 heures</span> – nous revenons très vite.
+                    Dans le cadre de notre politique d'amélioration continue, nous procédons à la mise à jour de nos systèmes de sécurité et de supervision. Cette opération planifiée renforce la résilience de nos plateformes et accélère les temps de réponse.
                 </p>
             </div>
 
-            <!-- Message de substitution pour l'audit -->
-            <div class="bg-cyan-500/5 border border-cyan-400/30 rounded-2xl p-4 md:p-5 backdrop-blur-sm mb-5">
-                <h3 class="font-museo text-cyan-400 text-base md:text-lg uppercase tracking-wide">Audit gratuit</h3>
-                <p class="text-cyan-200/80 text-xs md:text-sm mb-3">
-                    Le service d’audit automatique est temporairement suspendu.
-                </p>
-                <div class="bg-black/30 rounded-xl p-3 text-xs text-gray-300 border border-cyan-400/20">
-                    🔧 OWL SYSTEMS® prépare une nouvelle version de son audit.<br>
-                    Merci de réessayer ultérieurement ou de contacter notre support.
-                </div>
-            </div>
-
-            <!-- Coordonnées (inchangées) -->
+            <!-- Coordonnées -->
             <div class="space-y-2 mb-4 text-sm">
                 <div class="flex flex-wrap gap-2">
                     <span class="font-museo text-cyan-300/80 min-w-[70px] text-xs uppercase">Support</span>
@@ -123,12 +95,7 @@
                 </div>
             </div>
 
-            <!-- Lien espace client (inchangé) -->
-            <div class="bg-cyan-500/10 border border-cyan-400/30 rounded-full px-4 py-2 text-center text-xs mb-4">
-                <a href="https://owl-systems.com/auth/login" class="text-cyan-400 font-medium hover:underline">Client existant ? Connectez-vous à votre espace.</a>
-            </div>
-
-            <!-- Pied de page (inchangé) -->
+            <!-- Pied de page -->
             <div class="border-t border-cyan-400/30 pt-3 flex flex-col md:flex-row justify-between text-[11px] text-cyan-300/60 gap-2">
                 <div class="flex gap-4 justify-center md:justify-start">
                     <span>OWL SYSTEMS®</span>
@@ -139,47 +106,5 @@
         </div>
     </div>
 
-    <!-- MODALE (conservée mais désactivée) -->
-    <div id="auditModal" class="fixed inset-0 z-[1000] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm transition-all duration-200 opacity-0 invisible">
-        <div class="bg-gradient-to-br from-[#0F172A] to-[#0B0E14] border border-cyan-500/40 rounded-2xl max-w-md w-full shadow-2xl shadow-cyan-500/20 modal-enter">
-            <div class="p-6">
-                <div class="flex justify-between items-center mb-4">
-                    <div class="flex items-center gap-2">
-                        <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                        </svg>
-                        <h3 class="font-museo text-xl font-bold text-cyan-400">Analyse OWL SYSTEMS®</h3>
-                    </div>
-                    <button id="closeModalBtn" class="text-gray-400 hover:text-white transition">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
-                    </button>
-                </div>
-                <div id="modalMessage" class="text-gray-200 text-sm space-y-3"></div>
-                <div class="mt-6 flex justify-end">
-                    <button id="confirmModalBtn" class="bg-cyan-600/30 hover:bg-cyan-600/50 text-cyan-300 font-medium py-2 px-5 rounded-full border border-cyan-500/50 transition">
-                        Compris
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        (function() {
-            // On désactive complètement l'audit – la modale ne s'ouvre plus
-            // On laisse juste le bouton inactif ou on redirige vers un message.
-            const openBtn = document.getElementById('openModalBtn');
-            if (openBtn) {
-                openBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    alert('Le service d\'audit est temporairement suspendu pour maintenance. Merci de réessayer ultérieurement.');
-                });
-            }
-            // La modale ne sert plus à rien, on la garde mais on ne l'affiche pas.
-            // On peut la cacher complètement si on veut.
-        })();
-    </script>
 </body>
 </html>
